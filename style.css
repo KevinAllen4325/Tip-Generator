@@ -120,7 +120,7 @@ input {
 	text-align: center;
 	word-spacing: 10px;
 }
-#submit {
+#submit1 {
 	color: white;
 	background: #7AC5CD;
 	border: none;
@@ -129,7 +129,7 @@ input {
 	outline: none;
 	border-radius: 5px;
 }
-#submit:hover {
+#submit1:hover {
 	background: #94d0d7;
 }
 
