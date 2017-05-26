@@ -7,19 +7,18 @@ var tip = document.getElementById('tips');
 var subTXT = document.getElementById('subtotal');
 var tipTXT = document.getElementById('tip');
 var totalTXT = document.getElementById('total');
-var submitBtn = document.querySelector('button');
+var submitBtn = document.querySelector('button[type="button"]');
 var clearBtn = document.querySelector('button[type="reset"]');
 var inputs = document.querySelectorAll('input');
-
 submitBtn.addEventListener('click', function () {
-			submitCost()
+	validateForm();
+	submitCost();
 });
-
-clearBtn.addEventListener('click', function(){
+clearBtn.addEventListener('click', function () {
 	clearCost();
 })
 
-function submitCost(){
+function submitCost() {
 	var baseNum = parseFloat(base.value);
 	var taxNum = parseFloat(tax.value / 100);
 	var tipNum = parseFloat(tip.value / 100);
@@ -31,8 +30,24 @@ function submitCost(){
 	totalTXT.innerHTML = "$" + total.toFixed(2);
 }
 
-function clearCost(){
+function clearCost() {
 	subTXT.innerHTML = "$0.00";
 	tipTXT.innerHTML = "$0.00";
 	totalTXT.innerHTML = "$0.00";
+}
+
+function validateForm() {
+	var x = document.forms["myForm"]["meal"].value;
+	var y = document.forms["myForm"]["tax"].value;
+	var z = document.forms["myForm"]["tip"].value;
+	if (x == "") {
+		alert("Base price must be filled out");
+		return false;
+	} else if (y == "") {
+		alert("Tax must be filled out");
+		return false
+	} else if (z == "") {
+		alert("Tip must be filled out");
+		return false
+	}
 }
