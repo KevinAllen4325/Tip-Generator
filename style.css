@@ -1,0 +1,202 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background: #7AC5CD;
+	font-family: 'Karla';
+	margin: 0 auto;
+	font-size: 18px;
+}
+h1 {
+	color: white;
+	font-weight: bold;
+	font-size: 32px;
+	margin: 20px auto 0 auto;
+}
+.intro {
+	font-size: 18px;
+	background: white;
+
+	width: 80%;
+	border-radius: 15px;
+	margin: 0 auto;
+	padding: 17px 15px;
+}
+.introdiv {
+	text-align: center;
+}
+li {
+	display: inline-block;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+li a,
+li {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.4);
+	transition: .3s;
+}
+.navigate:hover {
+	color: #9f2a2a;
+}
+ul {
+	word-spacing: 10px;
+	text-align: center;
+	padding-left: 0;
+	margin-bottom: 45px;
+	margin-top: 25px;
+}
+.redspan {
+	color: #9f2a2a;
+	font-weight: bold;
+}
+header {
+	text-align: center;
+	margin: 0 auto;
+}
+.hidden {
+	display: none;
+}
+#or {
+	font-size: 20px;
+}
+/***********************CALCULATOR PAGE**************************/
+
+.calctitle {
+	background: #55898f;
+	height: 50px;
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 2px;
+}
+.calctitle p {
+	color: white;
+	padding-left: 10px;
+	font-size: 20px;
+	padding-top: 13px;
+}
+.calcparams {
+	background: white;
+	height: 325px;
+	margin: 0 auto;
+	border-radius: 2px;
+	width: 100%;
+}
+input {
+	height: 30px;
+	width: 85px;
+	height: 40px;
+	padding: 0 10px;
+	display: inline-block;
+	margin-left: 10px;
+	border: 2px solid lightgray;
+	outline: none;
+}
+#calculator {
+	width: 400px;
+	margin: -50px auto 0 auto;
+	border: 5px solid #7AC5CD;
+}
+#base,
+#tax,
+#tip {
+	display: inline-block;
+}
+#base {
+	padding-top: 10px;
+	/*padding-left: 43px;*/
+}
+#calculator #base p {
+	margin-left: 68.5px;
+}
+#tax {
+	margin-left: 128px;
+}
+#tipP {
+	margin-left: 75px;
+	display: block;
+}
+.buttons {
+	text-align: center;
+	word-spacing: 10px;
+}
+#submit {
+	color: white;
+	background: #7AC5CD;
+	border: none;
+	font-size: 18px;
+	padding: 15px 85px;
+	outline: none;
+	border-radius: 5px;
+}
+#submit:hover {
+	background: #94d0d7;
+}
+
+#reset1 {
+	color: white;
+	background: #9f2a2a;
+	border: none;
+	font-size: 18px;
+	padding: 15px 30px;
+	outline: none;
+	border-radius: 5px;
+}
+
+#reset1:hover {
+	background: #b25454;
+}
+.customercharge {
+	width: 400px;
+	margin: 0 auto;
+	border: 5px solid #7AC5CD;
+}
+#chargetitle {
+	background: #55898f;
+	height: 50px;
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 3px;
+}
+#chargetitle p {
+	color: white;
+	padding-left: 10px;
+	font-size: 20px;
+	padding-top: 13px;
+}
+.chargeparams {
+	background: white;
+	height: 185px;
+	margin: -20px auto 0;
+	border-radius: 2px;
+	width: 100%;
+	text-align: center;
+}
+.chargeparams p {
+	padding-top: 20px;
+}
+@media (max-width: 768px) {
+	.customercharge {
+		width: 400px;
+		margin-top: -5px !important;
+	}
+	li {
+		font-size: 18px;
+	}
+	ul {
+		margin: 10px auto 25px auto;
+	}
+}
+/***********************EARNINGS PAGE**************************/
+
+.earningsparams {
+	background: white;
+	height: 185px;
+	margin: -20px auto 0;
+	border-radius: 2px;
+	width: 100%;
+	text-align: center;
+}
+.earningsparams p {
+	padding-top: 20px;
+}
