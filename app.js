@@ -16,26 +16,14 @@ submit.addEventListener('click', function () {
 			clicked = false;
 });
 
-// clearBtn.addEventListener('click', function () {
-// 		clear();
-// });
-
 function submitCost(){
-	base = parseFloat(base.value);
-	tax = parseFloat(tax.value / 100);
-	tip = parseFloat(tip.value / 100);
-	subTotal = (base * tax) + base;
-	tip = (subTotal * tip)
-	total = subTotal + tip;
-	subTXT.innerHTML = "$" + subTotal;
-	tipTXT.innerHTML = "$" + tip.toFixed(2);
+	var baseNum = parseFloat(base.value);
+	var taxNum = parseFloat(tax.value / 100);
+	var tipNum = parseFloat(tip.value / 100);
+	var subTotal = (baseNum * taxNum) + baseNum;
+	var tipTotal = (subTotal * tipNum)
+	var total = subTotal + tipTotal;
+	subTXT.innerHTML = "$" + subTotal.toFixed(2);
+	tipTXT.innerHTML = "$" + tipTotal.toFixed(2);
 	totalTXT.innerHTML = "$" + total.toFixed(2);
 }
-
-// function clear(){
-// 	inputs.value= ""
-
-// 	subTXT.innerHTML = "";
-// 	tipTXT.innerHTML = "";
-// 	totalTXT.innerHTML = "";
-// }
