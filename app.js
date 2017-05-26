@@ -19,12 +19,13 @@ clearBtn.addEventListener('click', function () {
 })
 
 function submitCost() {
-	var baseNum = parseFloat(base.value);
+	var baseNum = parseFloat(base.value || 0);
 	var taxNum = parseFloat(tax.value / 100);
 	var tipNum = parseFloat(tip.value / 100);
 	var subTotal = (baseNum * taxNum) + baseNum;
-	var tipTotal = (subTotal * tipNum)
+	var tipTotal = (subTotal * tipNum);
 	var total = subTotal + tipTotal;
+
 	subTXT.innerHTML = "$" + subTotal.toFixed(2);
 	tipTXT.innerHTML = "$" + tipTotal.toFixed(2);
 	totalTXT.innerHTML = "$" + total.toFixed(2);
