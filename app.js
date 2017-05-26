@@ -7,14 +7,17 @@ var tip = document.getElementById('tips');
 var subTXT = document.getElementById('subtotal');
 var tipTXT = document.getElementById('tip');
 var totalTXT = document.getElementById('total');
-var submitBtn = document.getElementById('submit');
-var clearBtn = document.getElementById('reset');
+var submitBtn = document.querySelector('button');
+var clearBtn = document.querySelector('button[type="reset"]');
 var inputs = document.querySelectorAll('input');
-var clicked = true;
-submit.addEventListener('click', function () {
+
+submitBtn.addEventListener('click', function () {
 			submitCost()
-			clicked = false;
 });
+
+clearBtn.addEventListener('click', function(){
+	clearCost();
+})
 
 function submitCost(){
 	var baseNum = parseFloat(base.value);
@@ -26,4 +29,10 @@ function submitCost(){
 	subTXT.innerHTML = "$" + subTotal.toFixed(2);
 	tipTXT.innerHTML = "$" + tipTotal.toFixed(2);
 	totalTXT.innerHTML = "$" + total.toFixed(2);
+}
+
+function clearCost(){
+	subTXT.innerHTML = "$0.00";
+	tipTXT.innerHTML = "$0.00";
+	totalTXT.innerHTML = "$0.00";
 }
