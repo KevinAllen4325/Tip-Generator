@@ -16,7 +16,6 @@ h1 {
 .intro {
 	font-size: 18px;
 	background: white;
-
 	width: 80%;
 	border-radius: 15px;
 	margin: 0 auto;
@@ -61,6 +60,7 @@ header {
 	font-size: 20px;
 }
 /***********************CALCULATOR PAGE**************************/
+
 form p {
 	display: inline-block;
 }
@@ -95,7 +95,7 @@ input {
 	outline: none;
 }
 #calculator {
-	width: 400px;
+	width: 385px;
 	margin: -50px auto 0 auto;
 	border: 5px solid #7AC5CD;
 }
@@ -105,22 +105,24 @@ input {
 	display: inline-block;
 }
 #base {
-	padding-top: 10px;
-	/*padding-left: 43px;*/
+	padding-top: 20px;
 }
 #calculator #base p {
 	margin-left: 68.5px;
 }
 #tax {
 	margin-left: 128px;
+	padding-top: 10px;
 }
 #tipP {
 	margin-left: 75px;
+	padding-top: 10px;
+	padding-bottom: 20px;
 	display: block;
 }
 .buttons {
 	text-align: center;
-	word-spacing: 10px;
+	word-spacing: 5px;
 }
 #submit1 {
 	color: white;
@@ -134,7 +136,6 @@ input {
 #submit1:hover {
 	background: #94d0d7;
 }
-
 #reset1 {
 	color: white;
 	background: #9f2a2a;
@@ -144,7 +145,6 @@ input {
 	outline: none;
 	border-radius: 5px;
 }
-
 #reset1:hover {
 	background: #b25454;
 }
