@@ -26,25 +26,27 @@
 			<p><span class="redspan">Enter</span> the meal details</p>
 		</div>
 		<div class="calcparams">
+		<form>
 			<div id="base">
 				<p>Base Meal Price: $
-					<input type="text" name="meal" id="baseM">
+					<input type="number" name="meal" id="baseM" required>
 				</p>
 			</div>
 			<div id="tax">
 				<p>Tax Rate: %
-					<input type="text" name="tax" id="taxP">
+					<input type="number" name="tax" id="taxP" required>
 				</p>
 			</div>
 			<div id="tipP">
 				<p>Tip Percentage: %
-					<input type="text" name="tip" id="tips">
+					<input type="number" name="tip" id="tips" required>
 				</p>
 			</div>
 			<div class="buttons">
-				<button id="submit">SUBMIT</button>
-				<button id="reset1" value="Reset">RESET</button>
+				<button type="button" id="submit1">SUBMIT</button>
+				<button type="reset" id="reset1" value="Reset">RESET</button>
 			</div>
+			</form>
 		</div>
 	</div>
 	<div class="customercharge hidden">
@@ -53,11 +55,11 @@
 			</p>
 		</div>
 		<div class="chargeparams">
-			<p>Subtotal <span id="subtotal"></span>
+			<p>Subtotal <span id="subtotal">$0.00</span>
 			</p>
-			<p>Tip <span id="tip"></span>
+			<p>Tip <span id="tip">$0.00</span>
 			</p>
-			<p>Total <span id="total"></span>
+			<p>Total <span id="total">$0.00</span>
 			</p>
 		</div>
 	</div>
