@@ -26,26 +26,24 @@
 			<p><span class="redspan">Enter</span> the meal details</p>
 		</div>
 		<div class="calcparams">
-		<form>
-			<div id="base">
-				<p>Base Meal Price: $
+			<form name="myForm" onsubmit="return validateForm()">	<span id="base">
+				<p>Base Meal Price: $</p>
 					<input type="number" name="meal" id="baseM" required>
-				</p>
-			</div>
-			<div id="tax">
-				<p>Tax Rate: %
+				
+			</span>
+				<span id="tax">
+				<p>Tax Rate: %</p>
 					<input type="number" name="tax" id="taxP" required>
-				</p>
-			</div>
-			<div id="tipP">
-				<p>Tip Percentage: %
+				
+			</span>
+				<span id="tipP">
+				<p>Tip Percentage: %</p>
 					<input type="number" name="tip" id="tips" required>
-				</p>
-			</div>
-			<div class="buttons">
-				<button type="button" id="submit1">SUBMIT</button>
-				<button type="reset" id="reset1" value="Reset">RESET</button>
-			</div>
+			</span>
+				<div class="buttons">
+					<button type="button" id="submit1">SUBMIT</button>
+					<button type="reset" id="reset1" value="Reset">RESET</button>
+				</div>
 			</form>
 		</div>
 	</div>
