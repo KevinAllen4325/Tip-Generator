@@ -61,7 +61,9 @@ header {
 	font-size: 20px;
 }
 /***********************CALCULATOR PAGE**************************/
-
+form p {
+	display: inline-block;
+}
 .calctitle {
 	background: #55898f;
 	height: 50px;
