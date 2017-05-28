@@ -21,29 +21,33 @@
 		<li><a href="tip.html" class="navigate">calculator</a>
 		</li>
 	</ul>
-	<div id="calculator" class="hidden">
-		<div class="calctitle">
-			<p><span class="redspan">Enter</span> the meal details</p>
-		</div>
-		<div class="calcparams">
-			<form name="myForm" onsubmit="return validateForm()">	<span id="base">
+	<!-- SINGLE CALCULATOR -->
+	<div id="singleCalc">
+		<div id="calculator" class="hidden">
+			<div class="calctitle">
+				<p style="display: inline-block"><span class="redspan">Enter</span> the meal details</p>	<span class=" share">
+		<button type="button" name="share" id="shareBtn">SHARE BILL</button>
+		</span>
+			</div>
+			<div class="calcparams">
+				<form name="myForm" onsubmit="return validateForm()">	<span id="base">
+				<div class="centerform">
 				<p>Base Meal Price: $</p>
 					<input type="number" name="meal" id="baseM" required>
-				
 			</span>
-				<span id="tax">
+					<span id="tax">
 				<p>Tax Rate: %</p>
 					<input type="number" name="tax" id="taxP" required>
-				
 			</span>
-				<span id="tipP">
+					<span id="tipP">
 				<p>Tip Percentage: %</p>
 					<input type="number" name="tip" id="tips" required>
 			</span>
-				<div class="buttons">
-					<button type="button" id="submit1">SUBMIT</button>
-					<button type="reset" id="reset1" value="Reset">RESET</button>
-				</div>
+					<div class="buttons">
+						<button type="button" id="submit1">SUBMIT</button>
+						<button type="reset" id="reset1" value="Reset">RESET</button>
+					</div>
+			</div>
 			</form>
 		</div>
 	</div>
@@ -59,6 +63,67 @@
 			</p>
 			<p>Total <span id="total">$0.00</span>
 			</p>
+		</div>
+	</div>
+	</div>
+	<!-- SHARE BILL CALCULATOR -->
+	<div id="shareCalc" class="hide1">
+		<div id="calculator2" class="hidden">
+			<div class="calctitle2">
+				<p style="display: inline-block"><span class="redspan">Enter</span> the meal details</p>	<span class=" share">
+		<button type="button" name="single" id="singleBtn">SINGLE BILL</button>
+		</span>
+			</div>
+			<div class="calcparams2">
+				<p class="person1" style="display:inline-block">Person one</p>
+				<p class="person2" style="display:inline-block">Person two</p>
+				<form name="myForm2" onsubmit="return validateForm2()">
+					<div class="centerform">	<span id="base2">				
+				<p>Base Meal Price: $</p>
+					<input type="number" name="meal1" id="base1" required>
+					<input type="number" name="meal2" id="base3" required>
+			</span>
+						<span id="tax2">
+				<p>Tax Rate: %</p>
+					<input type="number" name="tax1" id="tax1" required>
+					<input type="number" name="tax2" id="tax3" required>
+			</span>
+						<span id="tip2">
+				<p>Tip Percentage: %</p>
+					<input type="number" name="tip1" id="tips1" required>
+					<input type="number" name="tip2" id="tips2" required>
+			</span>
+					</div>
+					<div class="buttons2">
+						<button type="button" id="submit2">SUBMIT</button>
+						<button type="reset" id="reset2" value="Reset">RESET</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="customercharge hidden">
+			<div id="chargetitle2">
+				<p>Customer <span class="redspan">Charges</span>
+				</p>
+			</div>
+			<div class="chargeparams2">
+				<div class="p1">
+					<p class="sub">Subtotal <span id="subtotal1">$0.00</span>
+					</p>
+					<p>Tip <span id="tip1">$0.00</span>
+					</p>
+					<p>Total <span id="total1">$0.00</span>
+					</p>
+				</div>
+				<div class="p2">
+					<p>Subtotal <span id="subtotal2">$0.00</span>
+					</p>
+					<p>Tip <span id="tip3">$0.00</span>
+					</p>
+					<p>Total <span id="total2">$0.00</span>
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="app.js"></script>
