@@ -28,16 +28,29 @@ var share = document.querySelector('button[id="shareBtn"]');
 var single = document.querySelector('button[id="singleBtn"]');
 var shareCalc = document.querySelector('div[id="shareCalc"')
 var singleCalc = document.querySelector('div[id="singleCalc"')
+var error = document.querySelector('p.error');
+
+var clear = [
+	subTXT,
+	tipTXT,
+	totalTXT,
+	subTXT1,
+	tipTXT1,
+	totalTXT1,
+	subTXT2,
+	tipTXT2,
+	totalTXT2
+]
 
 submitBtn.addEventListener('click', function () {
 	validateForm();
-	submitCostSingle();
+	submit(baseSingle, taxSingle, tipSingle, subTXT, tipTXT, totalTXT);
 });
 
 submitBtn2.addEventListener('click', function () {
 	validateForm2();
-	submitCostShare1();
-	submitCostShare2();
+	submit(baseShare1, taxShare1, tipShare1, subTXT1, tipTXT1, totalTXT1);
+	submit(baseShare2, taxShare2, tipShare2, subTXT2, tipTXT2, totalTXT2);
 });
 
 clearBtn.addEventListener('click', function () {
@@ -58,52 +71,22 @@ single.addEventListener('click', function () {
 	singleCalc.classList.remove('hide1')
 })
 
-function submitCostSingle() {
-	var baseNum = parseFloat(baseSingle.value || 0);
-	var taxNum = parseFloat(taxSingle.value / 100);
-	var tipNum = parseFloat(tipSingle.value / 100);
+function submit(a, b, c, d, e, f) {
+	var baseNum = parseFloat(a.value || 0);
+	var taxNum = parseFloat(b.value / 100);
+	var tipNum = parseFloat(c.value / 100);
 	var subTotal = (baseNum * taxNum) + baseNum;
 	var tipTotal = (subTotal * tipNum);
 	var total = subTotal + tipTotal;
-	subTXT.innerHTML = "$" + subTotal.toFixed(2);
-	tipTXT.innerHTML = "$" + tipTotal.toFixed(2);
-	totalTXT.innerHTML = "$" + total.toFixed(2);
-}
-
-function submitCostShare1() {
-	var baseNum = parseFloat(baseShare1.value || 0);
-	var taxNum = parseFloat(taxShare1.value / 100);
-	var tipNum = parseFloat(tipShare1.value / 100);
-	var subTotal = (baseNum * taxNum) + baseNum;
-	var tipTotal = (subTotal * tipNum);
-	var total = subTotal + tipTotal;
-	subTXT1.innerHTML = "$" + subTotal.toFixed(2);
-	tipTXT1.innerHTML = "$" + tipTotal.toFixed(2);
-	totalTXT1.innerHTML = "$" + total.toFixed(2);
-}
-
-function submitCostShare2() {
-	var baseNum = parseFloat(baseShare2.value || 0);
-	var taxNum = parseFloat(taxShare2.value / 100);
-	var tipNum = parseFloat(tipShare2.value / 100);
-	var subTotal = (baseNum * taxNum) + baseNum;
-	var tipTotal = (subTotal * tipNum);
-	var total = subTotal + tipTotal;
-	subTXT2.innerHTML = "$" + subTotal.toFixed(2);
-	tipTXT2.innerHTML = "$" + tipTotal.toFixed(2);
-	totalTXT2.innerHTML = "$" + total.toFixed(2);
+	d.innerHTML = "$" + subTotal.toFixed(2);
+	e.innerHTML = "$" + tipTotal.toFixed(2);
+	f.innerHTML = "$" + total.toFixed(2);
 }
 
 function clearCost() {
-	subTXT.innerHTML = "$0.00";
-	tipTXT.innerHTML = "$0.00";
-	totalTXT.innerHTML = "$0.00";
-	subTXT1.innerHTML = "$0.00";
-	tipTXT1.innerHTML = "$0.00";
-	totalTXT1.innerHTML = "$0.00";
-	subTXT2.innerHTML = "$0.00";
-	tipTXT2.innerHTML = "$0.00";
-	totalTXT2.innerHTML = "$0.00";
+		for(var i = 0; i < clear.length; i++){
+			clear[i].innerHTML = "$0.00"
+		}
 }
 
 function validateForm() {
@@ -130,7 +113,7 @@ function validateForm2() {
 	var y = document.forms["myForm2"]["tax2"].value;
 	var z = document.forms["myForm2"]["tip2"].value;
 	if (a == "") {
-		alert("Base price must be filled out");
+		error.innerHTML = "Base price must be filled out";
 		return false;
 	} else if (x == "") {
 		alert("Base price must be filled out");
