@@ -28,7 +28,6 @@ var share = document.querySelector('button[id="shareBtn"]');
 var single = document.querySelector('button[id="singleBtn"]');
 var shareCalc = document.querySelector('div[id="shareCalc"')
 var singleCalc = document.querySelector('div[id="singleCalc"')
-var error = document.querySelector('p.error');
 
 var clear = [
 	subTXT,
@@ -113,7 +112,7 @@ function validateForm2() {
 	var y = document.forms["myForm2"]["tax2"].value;
 	var z = document.forms["myForm2"]["tip2"].value;
 	if (a == "") {
-		error.innerHTML = "Base price must be filled out";
+		alert("Base price must be filled out");
 		return false;
 	} else if (x == "") {
 		alert("Base price must be filled out");
