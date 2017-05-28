@@ -59,30 +59,55 @@ header {
 #or {
 	font-size: 20px;
 }
+.hide1 {
+	display: none;
+}
+#singleCalc,
+#shareCalc {
+	margin: 0 auto;
+}
 /***********************CALCULATOR PAGE**************************/
 
 form p {
 	display: inline-block;
 }
-.calctitle {
+.calctitle,
+.calctitle2 {
 	background: #55898f;
 	height: 50px;
 	width: 100%;
 	margin: 0 auto;
 	border-radius: 2px;
 }
-.calctitle p {
+.calctitle p,
+.calctitle2 p {
 	color: white;
 	padding-left: 10px;
+	padding-top: 13.18px;
 	font-size: 20px;
-	padding-top: 13px;
+	margin: 0;
 }
-.calcparams {
+.share {
+	float: right;
+	padding-right: 10px;
+	padding-top: 9.73px;
+}
+#shareBtn,
+#singleBtn {
+	padding: 8px 21.01px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	color: white;
+	background: #554348;
+}
+.calcparams,
+.calcparams2 {
 	background: white;
-	height: 325px;
+	height: 315px;
 	margin: 0 auto;
 	border-radius: 2px;
-	width: 100%;
+	width: 400px;
 }
 input {
 	height: 30px;
@@ -94,10 +119,10 @@ input {
 	border: 2px solid lightgray;
 	outline: none;
 }
-#calculator {
-	width: 410px;
-	margin: -50px auto 0 auto;
-	border: 5px solid #7AC5CD;
+#calculator,
+#calculator2 {
+	width: 400px;
+	margin: -10px auto 0 auto;
 }
 #base,
 #tax,
@@ -105,53 +130,54 @@ input {
 	display: inline-block;
 }
 #base {
-	padding-top: 20px;
-}
-#calculator #base p {
-	margin-left: 101.5px;
+	padding-top: 22px;
 }
 #tax {
-	margin-left: 161px;
+	padding-left: 57px;
 	padding-top: 10px;
 }
 #tipP {
-	margin-left: 108px;
+	padding-left: 3px;
 	padding-top: 10px;
-	padding-bottom: 20px;
+	padding-bottom: 18px;
 	display: block;
 }
-.buttons {
+.buttons,
+.buttons2 {
 	text-align: center;
-	word-spacing: 10px;
+	word-spacing: 5px;
 }
-#submit1 {
+#submit1,
+#submit2 {
 	color: white;
 	background: #7AC5CD;
 	border: none;
 	font-size: 18px;
-	padding: 15px 85px;
+	padding: 15px 90px;
 	outline: none;
 	border-radius: 5px;
 }
-#submit1:hover {
+#submit1:hover,
+#submit2:hover {
 	background: #94d0d7;
 }
-#reset1 {
+#reset1,
+#reset2 {
 	color: white;
 	background: #9f2a2a;
 	border: none;
 	font-size: 18px;
-	padding: 15px 30px;
+	padding: 15px 35px;
 	outline: none;
 	border-radius: 5px;
 }
-#reset1:hover {
+#reset1:hover,
+#reset2:hover {
 	background: #b25454;
 }
 .customercharge {
 	width: 400px;
-	margin: 0 auto;
-	border: 5px solid #7AC5CD;
+	margin: 10px auto 0 auto;
 }
 #chargetitle {
 	background: #55898f;
@@ -160,25 +186,29 @@ input {
 	margin: 0 auto;
 	border-radius: 3px;
 }
-#chargetitle p {
+#chargetitle p,
+#chargetitle2 p {
 	color: white;
 	padding-left: 10px;
 	font-size: 20px;
 	padding-top: 13px;
+	margin-top: 0;
 }
 .chargeparams {
 	background: white;
 	height: 185px;
-	margin: -20px auto 0;
-	border-radius: 2px;
+	margin: 0 auto border-radius: 2px;
 	width: 100%;
 	text-align: center;
+	overflow: hidden;
 }
+.chargeparams2 p,
 .chargeparams p {
-	padding-top: 20px;
+	padding-bottom: 20px;
 }
 @media (max-width: 768px) {
-	.customercharge {
+	.customercharge,
+	.custmercharge2 {
 		width: 400px;
 		margin-top: -5px !important;
 	}
@@ -188,17 +218,67 @@ input {
 	ul {
 		margin: 10px auto 25px auto;
 	}
+	#chargetitle,
+	#chargetitle2 {
+		margin-top: 15px;
+	}
 }
-/***********************EARNINGS PAGE**************************/
+/***********************SHARE BILL**************************/
 
-.earningsparams {
-	background: white;
-	height: 185px;
-	margin: -20px auto 0;
-	border-radius: 2px;
-	width: 100%;
+#base3 {
+	padding-left: 1px;
+}
+#tax2 {
+	padding-left: 59px;
+}
+#tip2 {
+	padding-left: 6px;
+}
+#base3,
+#tax3,
+#tip2 {
+	margin-bottom: 16px;
+}
+input {
+	margin-right: 8px;
+}
+.centerform {
 	text-align: center;
 }
-.earningsparams p {
-	padding-top: 20px;
+.person1,
+.person2 {
+	font-size: 12px;
+	font-style: italic;
+	margin: 0;
+}
+.person1 {
+	padding-left: 194.5px;
+}
+.person2 {
+	padding-left: 43px;
+}
+.buttons2 {
+	margin-top: 20px;
+}
+.chargeparams2 {
+	background: white;
+	height: 185px;
+	margin: 0 auto border-radius: 2px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+.p1,
+.p2 {
+	width: 49%;
+	display: inline-block;
+	margin: auto;
+	padding: 0;
+}
+#chargetitle2 {
+	background: #55898f;
+	height: 50px;
+	width: 100%;
+	margin: 10 auto 0 auto;
+	border-radius: 3px;
 }
